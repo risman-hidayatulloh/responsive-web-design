@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid blue; */
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background-color: #191d2b;
+  font-family: "Poppins", "sans-serif";
+  color: #ffffff;
+  transition: all 0.4s ease-in-out;
+  padding: 2rem 2rem;
+}
+
+header {
+  color: #ffffff;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.header-title,
+.details {
+  text-align: center;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-item {
+  position: relative;
+  border-radius: 15px;
+}
+
+img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.hover-items {
+  width: 100%;
+  height: 100%;
+  background-color: #0f52ba;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  transform: scale(0);
+  transition: all 0.4s ease-in-out;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+i {
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  color: black;
+}
+
+.project-item:hover .hover-items {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.icon:hover i {
+  color: white;
+}
+
+@media screen and (max-width: 1250px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 1rem;
+    grid-gap: 1rem;
+  }
+}
